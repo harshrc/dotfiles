@@ -1,0 +1,59 @@
+! ! Dvorak -> programmer
+!______________mod_______________
+!
+!
+! ~ { ( & % # ! @ $ ^ * ) }
+! ' , . p y g f c r l - =
+! a o e i u d h t n s /
+! ; q j k x b m w v z
+!
+! ` [ 9 7 5 3 1 2 4 6 8 0 ]
+! " < > P Y G F C R L _ +
+! A O E I U D H T N S ?
+! : Q J K X B M W V Z
+!
+!
+
+! number row
+keycode 49 = asciitilde grave
+keycode 10 = braceleft bracketleft
+keycode 11 = parenleft 9
+keycode 12 = ampersand 7
+keycode 13 = percent 5
+keycode 14 = numbersign 3
+keycode 15 = exclam 1
+keycode 16 = at 2
+keycode 17 = dollar 4
+keycode 18 = asciicircum 6
+keycode 19 = asterisk 8
+keycode 20 = parenright 0
+keycode 21 = braceright bracketright
+!top row
+keysym q = slash question
+keysym w = comma less
+keysym e = period greater
+keysym r = p
+keysym t = y
+keysym y = f
+keysym u = g
+keysym i = c
+keysym o = r
+keysym p = l
+keysym s = o
+keysym d = e
+keysym f = u
+keysym g = i
+keysym h = d
+keysym j = h
+keysym k = t
+keysym l = n
+keysym semicolon = s
+keysym z = semicolon colon
+keysym x = q
+keysym c = j
+keysym v = k
+keysym b = x
+keysym n = b
+keysym comma = w
+keysym period = v
+keysym slash = z

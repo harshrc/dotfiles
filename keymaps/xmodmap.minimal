@@ -1,0 +1,34 @@
+clear lock
+clear mod1
+clear mod4
+
+! find keycodes using xev
+
+keycode 133 = Alt_L
+keycode 134 = Alt_R
+add mod1    =    Alt_L 
+
+!EMACS
+
+!keycode 66 = Mode_switch
+keycode 66 = Control_L
+add control = Control_L
+
+!Alt_R is mode switch now, so use it to insert grave
+keycode 108 = Mode_switch
+
+
+! number row
+keycode 49 = BackSpace asciitilde grave
+
+
+
+!top row
+keysym bracketleft = parenleft braceleft bracketleft
+
+
+
+
+
+
+
