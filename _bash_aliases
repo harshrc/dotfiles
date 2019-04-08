@@ -54,3 +54,8 @@ alias s='less -cSR'
 alias bat="acpitool -b"
 alias pu='pumount'
 alias pm='pmount'
+
+
+# custom
+alias ks='la -CF'; alias s='ls --color=auto -CF'
+alias ..='cd ..'; alias ...='cd ../../'; alias ....='cd ../../../'

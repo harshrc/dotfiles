@@ -35,10 +35,6 @@ if [ "$TERM" = "dumb" ]; then
 fi
 export WINEDEBUG=-all
 
-## Identity
-export REALNAME="Christopher Wellons"
-export NAME="$REALNAME"
-export EMAIL="wellons@nullprogram.com"
 
 ## PATH variables
 add() {

@@ -1,1 +1,17 @@
 set bind-tty-special-chars off
+set bell-style none
+
+# up & down arrow keys
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+"\ep": history-search-backward
+"\en": history-search-forward
+
+# op[esc-h] will show the last command that began with op
+"\eh": dynamic-complete-history
+
+# enable case-insensitive TAB-completion (for file names)
+set completion-ignore-case on
+
+# enable one-tab completion
+set show-all-if-ambiguous on 

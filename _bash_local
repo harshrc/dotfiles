@@ -1,0 +1,40 @@
+#set -o xtrace          # useful for debuging
+
+shopt -s cdspell
+shopt -s cdable_vars
+shopt -s checkhash
+shopt -s checkwinsize
+shopt -s no_empty_cmd_completion  # bash>=2.04 only
+shopt -s cmdhist
+shopt -s histappend histreedit histverify
+shopt -s extglob    # necessary for programmable completion
+
+# turn off system bell
+if [ -n "$DISPLAY" ]; then
+  xset b off
+fi
+
+HISTIGNORE='\&:fg:bg:ls:la:s:ll:h:pwd:cd ..:cd ~-:cd -:cd:jobs:set -x:ls -l:ls -al:ls -rt:ls -lrt:?:??:&:mv *:rm *:exec bash'
+HISTIGNORE=${HISTIGNORE}':%1:%2:popd:top:pine:mutt:shutdown*'
+export HISTIGNORE
+# Reduce redundancy in the history file
+export HISTCONTROL=ignoredups
+export HOSTFILE=$HOME/.hosts    # Put a list of remote hosts in ~/.hosts
+export HISTSIZE=10000
+export HISTFILESIZE=${HISTSIZE}
+
+history() {
+  _bash_history_sync
+  builtin history "$@"
+}
+
+_bash_history_sync() {
+  builtin history -a         #1
+  HISTFILESIZE=$HISTFILESIZE #2
+  builtin history -c         #3
+  builtin history -r         #4
+}
+
+export EDITOR="emacsclient -c"
+export ALTERNATE_EDITOR=""
+export VISUAL="emacsclient -c"
